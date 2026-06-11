@@ -8,26 +8,26 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-         background:#0f1115; color:#e6e8eb; padding:24px; max-width:1200px; margin:0 auto; }
-  h1 { font-size:22px; font-weight:600; margin-bottom:4px; }
-  .sub { color:#8b919a; font-size:13px; margin-bottom:24px; }
+         background:#0f1115; color:#e6e8eb; padding:32px 40px; max-width:1600px; margin:0 auto; }
+  h1 { font-size:26px; font-weight:600; margin-bottom:6px; }
+  .sub { color:#8b919a; font-size:14px; margin-bottom:30px; }
   .sub a.back, .sub a { color:#5ac8fa; text-decoration:none; }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .card { background:#1a1d24; border:1px solid #262a33; border-radius:14px; padding:18px 18px 14px;
-          display:flex; flex-direction:column; gap:6px; min-height:200px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .card { background:#1a1d24; border:1px solid #262a33; border-radius:16px; padding:26px 28px 22px;
+          display:flex; flex-direction:column; gap:10px; min-height:280px; }
   .card.clickable { cursor:pointer; transition:border-color .15s, transform .15s; }
-  .card.clickable:hover { border-color:#5ac8fa; transform:translateY(-2px); }
+  .card.clickable:hover { border-color:#5ac8fa; transform:translateY(-3px); }
   .card.nodata { opacity:0.5; border-style:dashed; }
-  .ctitle { font-size:13.5px; color:#9aa0a9; display:flex; justify-content:space-between; align-items:center; }
-  .drill { font-size:11.5px; color:#5ac8fa; }
-  .cval { font-size:30px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.1; }
-  .cval.nd { font-size:17px; color:#6b7280; font-weight:600; margin-top:30px; }
-  .csub { font-size:11px; color:#7b818a; line-height:1.4; }
-  .cdelta { font-size:11.5px; }
+  .ctitle { font-size:15px; color:#9aa0a9; display:flex; justify-content:space-between; align-items:center; }
+  .drill { font-size:13px; color:#5ac8fa; }
+  .cval { font-size:42px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.05; margin-top:2px; }
+  .cval.nd { font-size:20px; color:#6b7280; font-weight:600; margin-top:48px; }
+  .csub { font-size:12.5px; color:#7b818a; line-height:1.5; }
+  .cdelta { font-size:13px; }
   .delta.dim { color:#6b7280; }
-  canvas { width:100%!important; height:70px!important; margin-top:6px; }
-  @media(max-width:900px){ .grid { grid-template-columns:repeat(2,1fr); } }
-  @media(max-width:560px){ .grid { grid-template-columns:1fr; } }
+  canvas { width:100%!important; height:110px!important; margin-top:auto; }
+  @media(max-width:1100px){ .grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:640px){ .grid { grid-template-columns:1fr; } body{padding:20px;} }
 </style>
 </head>
 <body>
@@ -35,28 +35,28 @@
   <div class="sub">数据日期：2026-06-10 · ⚠️=需排查 · 按成功率升序　　<a href='index.html' class='back'>‹ 返回质量大盘</a></div>
   <div class="grid"><div class="card">
     <div class="ctitle">V3Pro ⚠️</div>
-    <div class="cval" style="color:#ff5c5c">0.00%</div><div class="csub">1次配网 · 7日71.43%</div><div class="cdelta"><span class="delta dim">较前日 —</span></div><canvas id="chM0" height="70"></canvas>
+    <div class="cval" style="color:#ff5c5c">0.00%</div><div class="csub">1次配网 · 7日71.43%</div><div class="cdelta"><span class="delta dim">较前日 —</span></div><canvas id="chM0" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">BM08</div>
-    <div class="cval" style="color:#ff5c5c">58.82%</div><div class="csub">17次配网 · 7日77.40%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼10.7500pp</span></div><canvas id="chM1" height="70"></canvas>
+    <div class="cval" style="color:#ff5c5c">58.82%</div><div class="csub">17次配网 · 7日77.40%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼10.7500pp</span></div><canvas id="chM1" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">Air1</div>
-    <div class="cval" style="color:#ffd166">88.79%</div><div class="csub">330次配网 · 7日89.03%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼5.0200pp</span></div><canvas id="chM2" height="70"></canvas>
+    <div class="cval" style="color:#ffd166">88.79%</div><div class="csub">330次配网 · 7日89.03%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼5.0200pp</span></div><canvas id="chM2" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">W1</div>
-    <div class="cval" style="color:#ffd166">94.04%</div><div class="csub">151次配网 · 7日96.19%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.0300pp</span></div><canvas id="chM3" height="70"></canvas>
+    <div class="cval" style="color:#ffd166">94.04%</div><div class="csub">151次配网 · 7日96.19%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.0300pp</span></div><canvas id="chM3" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">M9</div>
-    <div class="cval" style="color:#ffd166">94.55%</div><div class="csub">661次配网 · 7日94.69%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.1800pp</span></div><canvas id="chM4" height="70"></canvas>
+    <div class="cval" style="color:#ffd166">94.55%</div><div class="csub">661次配网 · 7日94.69%</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.1800pp</span></div><canvas id="chM4" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">M5P0</div>
-    <div class="cval" style="color:#3ddc84">97.37%</div><div class="csub">949次配网 · 7日96.25%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲1.5700pp</span></div><canvas id="chM5" height="70"></canvas>
+    <div class="cval" style="color:#3ddc84">97.37%</div><div class="csub">949次配网 · 7日96.25%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲1.5700pp</span></div><canvas id="chM5" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">T31</div>
-    <div class="cval" style="color:#3ddc84">98.32%</div><div class="csub">119次配网 · 7日96.79%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲0.9200pp</span></div><canvas id="chM6" height="70"></canvas>
+    <div class="cval" style="color:#3ddc84">98.32%</div><div class="csub">119次配网 · 7日96.79%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲0.9200pp</span></div><canvas id="chM6" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">V3</div>
-    <div class="cval" style="color:#3ddc84">100.00%</div><div class="csub">1次配网 · 7日33.33%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲100.0000pp</span></div><canvas id="chM7" height="70"></canvas>
+    <div class="cval" style="color:#3ddc84">100.00%</div><div class="csub">1次配网 · 7日33.33%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▲100.0000pp</span></div><canvas id="chM7" height="110"></canvas>
   </div></div>
 <script>
 const CHARTS = {"chM0": {"dates": ["2026-06-09", "2026-06-10"], "cur": [null, 0.0], "label": "V3Pro", "color": "#ff5c5c"}, "chM1": {"dates": ["2026-06-09", "2026-06-10"], "cur": [69.57, 58.82], "label": "BM08", "color": "#ff5c5c"}, "chM2": {"dates": ["2026-06-09", "2026-06-10"], "cur": [93.81, 88.79], "label": "Air1", "color": "#ffd166"}, "chM3": {"dates": ["2026-06-09", "2026-06-10"], "cur": [95.07, 94.04], "label": "W1", "color": "#ffd166"}, "chM4": {"dates": ["2026-06-09", "2026-06-10"], "cur": [95.73, 94.55], "label": "M9", "color": "#ffd166"}, "chM5": {"dates": ["2026-06-09", "2026-06-10"], "cur": [95.8, 97.37], "label": "M5P0", "color": "#3ddc84"}, "chM6": {"dates": ["2026-06-09", "2026-06-10"], "cur": [97.4, 98.32], "label": "T31", "color": "#3ddc84"}, "chM7": {"dates": ["2026-06-09", "2026-06-10"], "cur": [0.0, 100.0], "label": "V3", "color": "#3ddc84"}};

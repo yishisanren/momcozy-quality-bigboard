@@ -8,40 +8,40 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-         background:#0f1115; color:#e6e8eb; padding:24px; max-width:1200px; margin:0 auto; }
-  h1 { font-size:22px; font-weight:600; margin-bottom:4px; }
-  .sub { color:#8b919a; font-size:13px; margin-bottom:24px; }
+         background:#0f1115; color:#e6e8eb; padding:32px 40px; max-width:1600px; margin:0 auto; }
+  h1 { font-size:26px; font-weight:600; margin-bottom:6px; }
+  .sub { color:#8b919a; font-size:14px; margin-bottom:30px; }
   .sub a.back, .sub a { color:#5ac8fa; text-decoration:none; }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .card { background:#1a1d24; border:1px solid #262a33; border-radius:14px; padding:18px 18px 14px;
-          display:flex; flex-direction:column; gap:6px; min-height:200px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .card { background:#1a1d24; border:1px solid #262a33; border-radius:16px; padding:26px 28px 22px;
+          display:flex; flex-direction:column; gap:10px; min-height:280px; }
   .card.clickable { cursor:pointer; transition:border-color .15s, transform .15s; }
-  .card.clickable:hover { border-color:#5ac8fa; transform:translateY(-2px); }
+  .card.clickable:hover { border-color:#5ac8fa; transform:translateY(-3px); }
   .card.nodata { opacity:0.5; border-style:dashed; }
-  .ctitle { font-size:13.5px; color:#9aa0a9; display:flex; justify-content:space-between; align-items:center; }
-  .drill { font-size:11.5px; color:#5ac8fa; }
-  .cval { font-size:30px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.1; }
-  .cval.nd { font-size:17px; color:#6b7280; font-weight:600; margin-top:30px; }
-  .csub { font-size:11px; color:#7b818a; line-height:1.4; }
-  .cdelta { font-size:11.5px; }
+  .ctitle { font-size:15px; color:#9aa0a9; display:flex; justify-content:space-between; align-items:center; }
+  .drill { font-size:13px; color:#5ac8fa; }
+  .cval { font-size:42px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.05; margin-top:2px; }
+  .cval.nd { font-size:20px; color:#6b7280; font-weight:600; margin-top:48px; }
+  .csub { font-size:12.5px; color:#7b818a; line-height:1.5; }
+  .cdelta { font-size:13px; }
   .delta.dim { color:#6b7280; }
-  canvas { width:100%!important; height:70px!important; margin-top:6px; }
-  @media(max-width:900px){ .grid { grid-template-columns:repeat(2,1fr); } }
-  @media(max-width:560px){ .grid { grid-template-columns:1fr; } }
+  canvas { width:100%!important; height:110px!important; margin-top:auto; }
+  @media(max-width:1100px){ .grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:640px){ .grid { grid-template-columns:1fr; } body{padding:20px;} }
 </style>
 </head>
 <body>
   <h1>Momcozy App 质量大盘</h1>
-  <div class="sub">数据日期：2026-06-10 · 生成：2026-06-11 18:43</div>
+  <div class="sub">数据日期：2026-06-10 · 生成：2026-06-11 18:58</div>
   <div class="grid"><div class="card">
     <div class="ctitle">iOS 客户端崩溃率</div>
-    <div class="cval" style="color:#3ddc84">0.0002%</div><div class="csub">v2.2.9.5 · 1次/1人 · 目标≤0.06%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▼0.0008pp</span></div><canvas id="chIos" height="70"></canvas>
+    <div class="cval" style="color:#3ddc84">0.0002%</div><div class="csub">v2.2.9.5 · 1次/1人 · 目标≤0.06%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▼0.0008pp</span></div><canvas id="chIos" height="110"></canvas>
   </div><div class="card">
     <div class="ctitle">Android 客户端崩溃率</div>
-    <div class="cval" style="color:#3ddc84">0.0331%</div><div class="csub">v2.2.9 · 1次/1人 · 目标≤0.1%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▼0.0104pp</span></div><canvas id="chAnd" height="70"></canvas>
+    <div class="cval" style="color:#3ddc84">0.0331%</div><div class="csub">v2.2.9 · 1次/1人 · 目标≤0.1%</div><div class="cdelta"><span class="delta" style="color:#3ddc84">较前日 ▼0.0104pp</span></div><canvas id="chAnd" height="110"></canvas>
   </div><div class="card clickable" onclick="location.href='netcfg.html'">
     <div class="ctitle">一次配网成功率<span class="drill">查看型号 ›</span></div>
-    <div class="cval" style="color:#ffd166">91.00%</div><div class="csub">总体 · 点击查看各型号</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.1900pp</span></div><canvas id="chNet" height="70"></canvas>
+    <div class="cval" style="color:#ffd166">91.00%</div><div class="csub">总体 · 点击查看各型号</div><div class="cdelta"><span class="delta" style="color:#ff5c5c">较前日 ▼1.1900pp</span></div><canvas id="chNet" height="110"></canvas>
   </div><div class="card nodata">
     <div class="ctitle">账号登录成功率</div>
     <div class="cval nd">暂无数据</div><div class="csub">接口接入后自动呈现</div>
